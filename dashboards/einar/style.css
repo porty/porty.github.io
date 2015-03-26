@@ -1,0 +1,12 @@
+body {
+	background-color: black;
+	background-image: url(einar.png);
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+}
