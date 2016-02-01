@@ -95,7 +95,8 @@ function updateFrameRate(rate) {
         if (frameRateCounterElement === null) {
             frameRateCounterElement = document.getElementById('frameRateCounter');
         }
-        frameRateCounterElement.innerText = rate + 'FPS';
+        frameRateCounterElement.innerText = Math.round(rate) + 'FPS';
+        frameRateCounter = 0;
     }
 }
 
