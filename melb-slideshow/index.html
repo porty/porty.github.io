@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Melbourne Slideshow</title>
+    <style>
+        body {
+            background-image: url('Slideshow.001.jpeg');
+            background-repeat: no-repeat;
+            background-color: black;
+            background-position: center;
+            background-size: 100%;
+            transition: linear 2s;
+        }
+    </style>
+</head>
+<body>
+<script>
+
+    var imageIndex = 1;
+    var maxImageIndex = 25;
+
+    function nextImage() {
+        imageIndex++;
+        if (imageIndex > maxImageIndex) {
+            imageIndex = 1;
+        }
+
+        var fileName = 'Slideshow.00' + imageIndex + '.jpeg';
+        if (imageIndex >= 10) {
+            fileName = 'Slideshow.0' + imageIndex + '.jpeg';
+        }
+        
+        document.body.style.backgroundImage = "url('" + fileName + "')";
+    }
+
+    setInterval(nextImage, 30000);
+
+</script>
+</body>
+</html>
